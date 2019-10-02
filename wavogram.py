@@ -20,7 +20,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import soundfile as sf
 from scipy import signal
-import glob
 
 def wavogram(wavFile,pltTitle='',masked=True,cbar=False):
     f = plt.figure()
@@ -47,11 +46,13 @@ def wavogram(wavFile,pltTitle='',masked=True,cbar=False):
     plt.savefig(os.path.splitext(wavFile)[0]+'.jpg', bbox_inches = "tight",dpi=300)
  
 if __name__ == '__main__':
+    
     # To test a single wav file:
     wav_file = 'file.wav'
     wavogram(wav_file)
     
     # To test all wav files in one directory
+    import glob
     wavLoc = '/Path/to/files/*.wav';
     for wav_file in glob.glob(wavLoc):
         wavogram(wav_file)
