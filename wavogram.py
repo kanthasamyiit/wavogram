@@ -13,6 +13,8 @@ str:  pltTitle => send any string to be used as the plot title.
 bool: masked   => set to false if full data needs to be plotted. Leave it default if masking lower amplitudes is okay.
 bool: cbar     => set to true if colorbar needs to be plotted.
 
+Output .jpg file is saved with the same basename as the .wav file
+
 """
 
 import os
